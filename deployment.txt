@@ -1,0 +1,31 @@
+Deployment Instructions.
+
+-- Kindly run the Spring application 
+--For UI,open the index2.html in a browser
+-- It allows you to create user, hacker and vote for them .
+
+Technological Stack
+-- UI - html,css,js
+-- Backend - Spring with Maven
+-- Database - Postgresql
+
+Database Schema
+
+create database voting;
+------------------------------------------------------------------
+CREATE TABLE public."user" (
+ userid int4 NOT NULL PRIMARY KEY,
+ name varchar NOT NULL,
+ vote int4 NULL DEFAULT 0,
+ emailid varchar NOT NULL
+);
+-------------------------------------------------------------
+
+CREATE TABLE public.contestant (
+ id int4 NOT NULL PRIMARY KEY,
+ "name" varchar NOT NULL,
+ challengecount int4 NULL DEFAULT 0,
+ votecount int4 NULL DEFAULT 0
+);
+
+----------------------------------------------------------
